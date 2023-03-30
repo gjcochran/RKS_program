@@ -3,3 +3,7 @@
 #
 # reverse_map(1, 2, 3) { |i| i * 2 }      # => [6, 4, 2]
 
+def reverse_map(*nums, &block)
+  arr = *nums
+  arr.reverse.map(&block)
+end

@@ -8,5 +8,11 @@
 # "11\n7\n18\n" to standard output.
 
 def sum_difference_product
-  # your code goes here
+  puts "please type two integers: "
+  answer = gets.chomp
+  answer.split.each { |n| puts n }
 end
+
+sum_difference_product
+
+

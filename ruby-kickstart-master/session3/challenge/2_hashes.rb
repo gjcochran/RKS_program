@@ -8,3 +8,15 @@
 # staircase 4  # => {1 => [], 3 => [2]}
 # staircase 5  # => {1 => [], 3 => [2], 5 =>[2, 4]}
 
+def staircase(int)
+  (1..int).each_with_object({}) do |num, hsh|
+    if num.odd?
+      evens = (1..num).select(&:even?) 
+      hsh[num] = evens
+    else
+      next
+    end
+  end
+end
+
+p staircase 5

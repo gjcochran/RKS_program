@@ -34,8 +34,8 @@ class HTMLTag
   attr_accessor :name, :innerHTML, :options
 
   # options: :multiline should be true or false
-  def initialize(name, innerHTML, options)
-    @name, @innerHTML, @options = name, innerHTML, options
+  def initialize(name, innerHTML, options, color = { red: "#FF0000", green: "#00FF00", blue: "#0000FF"})
+    @name, @innerHTML, @options, @color = name, innerHTML, options, color
   end
 
   def font
